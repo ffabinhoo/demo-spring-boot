@@ -9,11 +9,11 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: mvn clean package
-            - name: Step three
-              run: docker build -t demo-spring:latest .
-            - name: Step four
-              run: docker run --name demo-spring -p 8080:8080 -d demo-spring
+              run: env | sort
+            #- name: Step three
+            #  run: docker build -t demo-spring:latest .
+            #- name: Step four
+            #  run: docker run --name demo-spring -p 8080:8080 -d demo-spring
               
               
              
