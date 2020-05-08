@@ -51,12 +51,15 @@ jobs:
     
     - name: Maven clean package
       run: mvn clean package
-      
+    
+    - name: Step three
+      run: docker build -t demo-spring:latest .
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: my-ecr-repo
+        ECR_REPOSITORY: demo-spring:latest
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
