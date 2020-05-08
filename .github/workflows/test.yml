@@ -1,0 +1,12 @@
+name: test
+on: push
+
+jobs:
+    jobs1:
+         name:First Job
+         runs-on:ubuntu-latest
+         steps:
+             - name: Step one
+               uses:actions/checkout@2
+             - name: Step two
+               run: env | sort
