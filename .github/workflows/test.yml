@@ -9,7 +9,7 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: env | sort
+              run: mvn clean package
             - name: Step three
               run: docker build -t demo-spring:latest .
             - name: Step four
