@@ -49,8 +49,8 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
     
-    #- name: Maven clean package
-    #  run: mvn clean package
+    - name: Maven clean package
+      run: mvn clean package
     
     #- name: Build
     #  run: docker build -t ffabinhoo/demo-spring:latest .
