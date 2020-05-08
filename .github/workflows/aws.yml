@@ -52,8 +52,8 @@ jobs:
     - name: Maven clean package
       run: mvn clean package
     
-    #- name: Build
-    #  run: docker build -t ffabinhoo/demo-spring:latest .
+    - name: Build
+      run: docker build -t ffabinhoo/demo-spring:latest .
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
