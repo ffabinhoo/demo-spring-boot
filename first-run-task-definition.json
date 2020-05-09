@@ -23,7 +23,7 @@
           ],
       "command": [],
       "linuxParameters": null,
-      "cpu": 0,
+      "cpu": 512,
       "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
@@ -32,7 +32,7 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": null,
+      "memory": 1024,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
@@ -57,10 +57,9 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "512",
+  "memory": "2048",
   "taskRoleArn": null,
   "compatibilities": [
-    "EC2",
     "FARGATE"
   ],
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition:2",
@@ -114,8 +113,8 @@
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "256",
-  "revision": 2,
+  "cpu": "1024",
+  "revision": 1,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
