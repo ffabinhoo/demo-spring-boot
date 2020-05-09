@@ -66,5 +66,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: demo-spring-container-service
-        cluster: spring-demo-cluster
+        cluster: default
         wait-for-service-stability: true
