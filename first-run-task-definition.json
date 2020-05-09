@@ -14,7 +14,13 @@
         }
       },
       "entryPoint": [],
-      "portMappings": [],
+      "portMappings": [
+            {
+              "hostPort": 8888,
+              "protocol": "tcp",
+              "containerPort": 8888
+            }
+          ],
       "command": [],
       "linuxParameters": null,
       "cpu": 0,
