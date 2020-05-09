@@ -15,15 +15,25 @@
       },
       "entryPoint": [],
       "portMappings": [
-            {
-              "hostPort": 8080,
-              "protocol": "tcp",
-              "containerPort": 8080
-            }
-          ],
+        {
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "containerPort": 8080
+        },
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        },
+        {
+          "hostPort": 8888,
+          "protocol": "tcp",
+          "containerPort": 8888
+        }
+      ],
       "command": [],
       "linuxParameters": null,
-      "cpu": 512,
+      "cpu": 1024,
       "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
@@ -32,7 +42,7 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": 1024,
+      "memory": null,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
@@ -60,9 +70,10 @@
   "memory": "2048",
   "taskRoleArn": null,
   "compatibilities": [
+    "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition:2",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition:13",
   "family": "first-run-task-definition",
   "requiresAttributes": [
     {
@@ -114,7 +125,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "1024",
-  "revision": 1,
+  "revision": 13,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
