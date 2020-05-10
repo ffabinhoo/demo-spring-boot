@@ -45,7 +45,7 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "networkMode": "host",
+  "networkMode": "awsvpc",
   "cpu": "1024",
   "revision": 16
 }
