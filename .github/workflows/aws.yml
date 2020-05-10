@@ -19,7 +19,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn clean package
 
 
     - name: Configure AWS credentials
@@ -57,7 +57,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: task-definition.json
+        task-definition: task-definition-spring.json
         container-name: demo-spring-boot-container
         image: ${{ steps.build-image.outputs.image }}
 
