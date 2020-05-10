@@ -24,18 +24,21 @@
         }
       ],
       "cpu": 1024,
+     
+      
       "image": "949231774219.dkr.ecr.us-east-2.amazonaws.com/spring-demo",
+      
       "name": "demo-spring-container"
     }
   ],
   "memory": "2048",
   "compatibilities": [
-    "ECS"
+    "EC2"
   ],
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition",
   "family": "first-run-task-definition",
   "requiresCompatibilities": [
-    "ECS"
+    "EC2"
   ],
   "networkMode": "host",
   "cpu": "1024"
