@@ -43,7 +43,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: demo-spring-boot-repo
+        ECR_REPOSITORY: spring
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
