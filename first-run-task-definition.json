@@ -21,31 +21,22 @@
           "hostPort": 80,
           "protocol": "tcp",
           "containerPort": 80
-        },
-        {
-          "hostPort": 8888,
-          "protocol": "tcp",
-          "containerPort": 8888
         }
       ],
       "cpu": 1024,
-     
-      
       "image": "949231774219.dkr.ecr.us-east-2.amazonaws.com/spring-demo",
-      
       "name": "demo-spring-container"
     }
   ],
   "memory": "2048",
   "compatibilities": [
-    "FARGATE"
+    "ECS"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition:16",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition",
   "family": "first-run-task-definition",
   "requiresCompatibilities": [
-    "FARGATE"
+    "ECS"
   ],
-  "networkMode": "awsvpc",
-  "cpu": "1024",
-  "revision": 16
+  "networkMode": "host",
+  "cpu": "1024"
 }
