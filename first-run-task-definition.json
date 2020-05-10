@@ -38,7 +38,7 @@
   "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/first-run-task-definition",
   "family": "first-run-task-definition",
   "requiresCompatibilities": [
-    "EC2"
+    "FARGATE"
   ],
   "networkMode": "host",
   "cpu": "1024"
