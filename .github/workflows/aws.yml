@@ -43,7 +43,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: spring
+        ECR_REPOSITORY: demo-spring
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
@@ -65,6 +65,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: demo-spring-boot-container-service
-        cluster: demo-spring-boot-cluster
+        service: demo-spring-cluster-service
+        cluster: demo-spring-cluster
         wait-for-service-stability: true
