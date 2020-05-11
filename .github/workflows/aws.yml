@@ -58,13 +58,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition-spring.json
-        container-name: demo-spring-container
+        container-name: spring-demo-container
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: demo-spring-cluster-service
-        cluster: demo-spring-cluster
+        service: spring-demo-container-service
+        cluster: spring-demo-cluster
         wait-for-service-stability: true

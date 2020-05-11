@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": null,
+  "executionRoleArn": "arn:aws:iam::949231774219:role/ecs-demo-spring-role-fabio",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -8,20 +8,20 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/demo-task",
+          "awslogs-group": "/ecs/task-definition-spring",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": null,
+      "entryPoint": [],
       "portMappings": [
         {
-          "hostPort": 0,
+          "hostPort": 8080,
           "protocol": "tcp",
           "containerPort": 8080
         }
       ],
-      "command": null,
+      "command": [],
       "linuxParameters": null,
       "cpu": 0,
       "environment": [],
@@ -32,8 +32,8 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": 500,
-      "memoryReservation": null,
+      "memory": null,
+      "memoryReservation": 450,
       "volumesFrom": [],
       "stopTimeout": null,
       "image": "949231774219.dkr.ecr.us-east-2.amazonaws.com/demo-spring",
@@ -44,7 +44,7 @@
       "interactive": null,
       "healthCheck": null,
       "essential": true,
-      "links": null,
+      "links": [],
       "hostname": null,
       "extraHosts": null,
       "pseudoTerminal": null,
@@ -53,23 +53,30 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "demo-spring-container"
+      "name": "spring-demo-container"
     }
   ],
   "placementConstraints": [],
-  "memory": null,
-  "taskRoleArn": "arn:aws:iam::949231774219:role/ecs-demo-spring-role-fabio",
+  "memory": "1024",
+  "taskRoleArn": null,
   "compatibilities": [
-    "EC2"
+    "EC2",
+    "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/demo-task:1",
-  "family": "demo-task",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:949231774219:task-definition/task-definition-spring:3",
+  "family": "task-definition-spring",
   "requiresAttributes": [
     {
       "targetId": null,
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
     },
     {
       "targetId": null,
@@ -87,16 +94,34 @@
       "targetId": null,
       "targetType": null,
       "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
     }
   ],
   "pidMode": null,
   "requiresCompatibilities": [
-    "EC2"
+    "FARGATE"
   ],
-  "networkMode": "bridge",
-  "cpu": null,
-  "revision": 1,
+  "networkMode": "awsvpc",
+  "cpu": "512",
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
