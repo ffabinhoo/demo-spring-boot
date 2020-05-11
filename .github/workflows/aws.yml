@@ -58,7 +58,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition-spring.json
-        container-name: demo-spring-boot-container
+        container-name: demo-spring-container
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
