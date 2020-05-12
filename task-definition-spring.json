@@ -1,5 +1,5 @@
 {
-  "family": "dcdojo",
+  "family": "demo-spring",
   "executionRoleArn": "arn:aws:iam::949231774219:role/ecsTaskExecutionRole",
   "containerDefinitions": [
       {
