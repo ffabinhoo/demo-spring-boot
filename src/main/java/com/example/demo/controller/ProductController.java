@@ -35,9 +35,7 @@ public class ProductController {
 	public String productAdd(@RequestBody Product product) {
 		Product productnew = productService.save(product);
 		
-		if (null!=productnew.getId() && null!= product.getId()) {
-			return " success " + productnew.getDescription() + " with id: " + product.getId() + " updated";
-		}else if (null!=productnew.getId()) {
+		if (null!=productnew.getId() ) {
 			return " success " + productnew.getDescription() + " with id: " + product.getId() + " created";
 		}else {
 			
