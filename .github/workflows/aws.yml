@@ -1,4 +1,4 @@
-name: Your app name
+name: Demo Spring Test
 
 on:
   push:
@@ -8,9 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x]
+    
 
     steps:
     - uses: actions/checkout@v2
@@ -28,8 +26,8 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: spring-demo-cicd
-        environment_name: spring-beanstalk-env-name
+        application_name: demo-spring-test
+        environment_name: DemoSpringTest-env
         region: us-east-2
         version_label: "1"
         deployment_package: target/demo-0.0.1-SNAPSHOT.jar
