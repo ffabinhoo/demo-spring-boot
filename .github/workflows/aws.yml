@@ -1,36 +1,36 @@
-name: Demo Spring Test
+# name: Demo Spring Test
 
-on:
-  push:
-    branches:
-    - master
+# on:
+#   push:
+#     branches:
+#     - master
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
     
 
-    steps:
-    - uses: actions/checkout@v2
+#     steps:
+#     - uses: actions/checkout@v2
     
 
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-    - name: Build with Maven
-      run: mvn clean package
+#     - name: Set up JDK 11
+#       uses: actions/setup-java@v1
+#       with:
+#         java-version: 11
+#     - name: Build with Maven
+#       run: mvn clean package
 
-    - name: Beanstalk Deploy for app
-      uses: einaregilsson/beanstalk-deploy@v10
-      with:
-        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: demo-spring-test
-        environment_name: DemoSpringTest-env
-        region: us-east-2
-        version_label: ${{ github.sha }}
-        deployment_package: target/demo-0.0.1-SNAPSHOT.jar
+#     - name: Beanstalk Deploy for app
+#       uses: einaregilsson/beanstalk-deploy@v10
+#       with:
+#         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         application_name: demo-spring-test
+#         environment_name: DemoSpringTest-env
+#         region: us-east-2
+#         version_label: ${{ github.sha }}
+#         deployment_package: target/demo-0.0.1-SNAPSHOT.jar
 
-    - name: Deployed!
-      run: echo App deployed to ELB
+#     - name: Deployed!
+#       run: echo App deployed to ELB
