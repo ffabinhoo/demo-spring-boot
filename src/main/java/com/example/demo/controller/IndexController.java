@@ -12,7 +12,7 @@ import com.example.demo.beans.Beans;
 public class IndexController {
 	
 	@Autowired
-	Beans beans = new Beans();
+	private Beans beans;
 	
 	@GetMapping
 	public String index() {
