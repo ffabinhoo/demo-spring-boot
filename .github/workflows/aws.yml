@@ -22,8 +22,8 @@
        run: mvn clean package
 
      - uses: azure/login@v1.1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+       with:
+         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
      - run: |
         az webapp list --query "[?state=='Running']"
