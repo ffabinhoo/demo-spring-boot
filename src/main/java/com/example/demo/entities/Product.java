@@ -16,6 +16,7 @@ public class Product {
 	@Column(name = "product_id")
 	private Integer id;
 	
+	@Column(name = "description")
 	private String description;
 
 	public Integer getId() {

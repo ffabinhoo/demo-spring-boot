@@ -30,6 +30,11 @@ public class ProductController {
 		return productService.findOne(id);
 	}
 	
+	@GetMapping(path="/search/{description}")
+	public Iterable<Product> productFindDescription(@PathVariable("description") String description){
+		return productService.findByDescriptionContaining(description);
+	}
+	
 	
 	@PostMapping(path="/add")
 	public String productAdd(@RequestBody Product product) {

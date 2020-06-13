@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,10 @@ public class ProductService {
 
 	public Product save(Product product) {
 		return productRepository.save(product);
+	}
+
+	public List<Product> findByDescriptionContaining(String description) {
+		return productRepository.findByDescriptionContaining(description);
 	}
 
 }
