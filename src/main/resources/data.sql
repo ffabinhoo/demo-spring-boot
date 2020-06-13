@@ -6,20 +6,20 @@ CREATE TABLE product (
 );
 
 INSERT INTO product
-values (null,'aaa');
+values (1,'aaa');
 
 INSERT INTO product
-values (null,'bbb');
+values (2,'bbb');
 
 
 INSERT INTO product
-values (null,'ccc');
+values (3,'ccc');
 
 INSERT INTO product
-values (null,'abc');
+values (4,'abc');
 
 INSERT INTO product
-values (null,'aacc');
+values (5,'aacc');
 
 
 

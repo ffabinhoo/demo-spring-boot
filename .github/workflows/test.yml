@@ -1,19 +1,19 @@
-# name: test
-# on: push
+ name: test
+ on: push
 
-# jobs:
-#     job_1:
-#         name: First Job
-#         runs-on: ubuntu-latest
-#         steps:
-#             - name: Step one
-#               uses: actions/checkout@v2
-#             - name: Step two
-#               run: env | sort
-#             #- name: Step three
-#             #  run: docker build -t demo-spring:latest .
-#             #- name: Step four
-#             #  run: docker run --name demo-spring -p 8080:8080 -d demo-spring
+ jobs:
+     job_1:
+         name: First Job
+         runs-on: ubuntu-latest
+         steps:
+             - name: Step one
+               uses: actions/checkout@v2
+             - name: Step two
+               run: env | sort
+             #- name: Step three
+             #  run: docker build -t spring-demo:latest .
+             #- name: Step four
+             #  run: docker run --name spring-demo -p 5000:5000 -d spring-demo
               
               
              

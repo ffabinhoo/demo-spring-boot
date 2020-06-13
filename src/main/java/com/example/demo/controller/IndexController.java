@@ -16,9 +16,12 @@ public class IndexController {
 	
 	@GetMapping
 	public String index() {
-		//ApplicationContext context = new AnnotationConfigApplicationContext(Beans.class);
-		//Beans beans = context.getBean("beans", Beans.class);
-
 		return "Index from Beans (" + beans.getName() + ")";
 	}
+	
+	@GetMapping("/number")
+	public String number() {
+		return "Number from Beans (" + beans.getNumber() + ")";
+	}
+	
 }
