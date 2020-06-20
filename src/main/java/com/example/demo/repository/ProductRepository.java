@@ -1,14 +1,12 @@
 package com.example.demo.repository;
 
-import java.util.List;
-
+import com.example.demo.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.entities.Product;
+import java.util.List;
 
-public interface ProductRepository extends JpaRepository<Product, Integer>{
-	
-	//List<Stock> findBySymbolContaining(String symbol);
-	List<Product> findByDescriptionContaining(String description);
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+
+    List<Product> findByDescriptionContaining(String description);
 
 }

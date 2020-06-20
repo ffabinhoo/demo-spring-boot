@@ -40,16 +40,3 @@
          app-name: ffabinhoo-spring-boot
          publish-profile: ${{ secrets.AZURE_CREDENTIALS }}
 
-#     - name: Beanstalk Deploy for app
-#       uses: einaregilsson/beanstalk-deploy@v10
-#       with:
-#         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#         application_name: demo-spring-test
-#         environment_name: DemoSpringTest-env
-#         region: us-east-2
-#         version_label: ${{ github.sha }}
-#         deployment_package: target/demo-0.0.1-SNAPSHOT.jar
-
-#     - name: Deployed!
-#       run: echo App deployed to ELB
