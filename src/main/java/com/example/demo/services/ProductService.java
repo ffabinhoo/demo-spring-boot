@@ -27,6 +27,10 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public void deleteAll(){
+        productRepository.deleteAll();
+    }
+
     public List<Product> findByDescriptionContaining(String description) {
         return productRepository.findByDescriptionContaining(description);
     }
